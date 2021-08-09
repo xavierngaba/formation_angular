@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { RouterModule, Routes, Router } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -10,6 +11,13 @@ import { HomeComponent } from './home/home.component';
 import { CarteComponent } from './carte/carte.component';
 import { ReserveComponent } from './reserve/reserve.component';
 import { ContactComponent } from './contact/contact.component';
+
+const routes: Routes = [
+  { path: '' , component:  HomeComponent}, // http://localhost:4200
+  { path: 'carte', component: CarteComponent}, // http://localhost:4200/carte
+  { path: 'reserve', component: ReserveComponent}, // http://localhost:4200/reserve
+  { path: 'contact', component: ContactComponent} // http://localhost:4200/contact
+];
 
 @NgModule({
   declarations: [
@@ -28,7 +36,8 @@ import { ContactComponent } from './contact/contact.component';
     MatButtonModule,
     MatSidenavModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]
