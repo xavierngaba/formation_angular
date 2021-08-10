@@ -14,17 +14,17 @@ export class MainDashComponent {
       if (matches) {
         return [
           {title: 'A la carte', cols: 2, rows: 1},
-          {title: 'Burgers', cols: 1, rows: 1},
-          {title: 'Pizzas', cols: 1, rows: 2},
-          {title: 'Salades', cols: 1, rows: 1}
+          {title: 'Burgers', cols: 2, rows: 1},
+          {title: 'Pizzas', cols: 2, rows: 1},
+          {title: 'Salades', cols: 2, rows: 1}
         ];
       }
 
       return [
         {title: 'A la carte', cols: 2, rows: 1},
-        {title: 'Burgers', cols: 1, rows: 1},
-        {title: 'Pizzas', cols: 1, rows: 2},
-        {title: 'Salades', cols: 1, rows: 1}
+        {title: 'Burgers', cols: 2, rows: 1},
+        {title: 'Pizzas', cols: 2, rows: 1},
+        {title: 'Salades', cols: 2, rows: 1}
       ];
     })
   );
