@@ -21,7 +21,7 @@ export class QuickLunchService {
 
   constructor() { }
 
-  getBurges(): Food[] {
+  getBurgers(): Food[] {
     return this.burgers;
   }
 

@@ -15,18 +15,14 @@ export class MainDashComponent implements OnInit {
     map(({ matches }) => {
       if (matches) {
         return [
-          {title: 'A la carte', cols: 2, rows: 1},
-          {title: 'Burgers', cols: 2, rows: 1},
-          {title: 'Pizzas', cols: 2, rows: 1},
-          {title: 'Salades', cols: 2, rows: 1}
+          {title: 'Burgers', cols: 2, rows: 1, id: 'brg'},
+          {title: 'Pizzas', cols: 2, rows: 1, id: 'pzz'}
         ];
       }
 
       return [
-        {title: 'A la carte', cols: 2, rows: 1},
-        {title: 'Burgers', cols: 2, rows: 1},
-        {title: 'Pizzas', cols: 2, rows: 1},
-        {title: 'Salades', cols: 2, rows: 1}
+        {title: 'Burgers', cols: 2, rows: 1, id: 'brg'},
+        {title: 'Pizzas', cols: 2, rows: 1, id: 'pzz'}
       ];
     })
   );
@@ -37,7 +33,7 @@ export class MainDashComponent implements OnInit {
   constructor(private breakpointObserver: BreakpointObserver, private qls: QuickLunchService) {}
 
   ngOnInit() {
-    this.burgers = this.qls.getBurges();
+    this.burgers = this.qls.getBurgers();
     this.pizzas = this.qls.getPizzas();
   }
 }
