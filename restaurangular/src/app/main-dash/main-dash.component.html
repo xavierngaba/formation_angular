@@ -15,21 +15,25 @@
             </mat-menu>
           </mat-card-title>
         </mat-card-header>
-        <mat-card-content class="dashboard-card-content" *ngIf="card.id === 'brg'">
-          <p *ngFor="let bug of burgers">
-            <span>{{ bug.title }}</span> :
-            <span>{{ bug.description }}</span>
-            <span class="price">{{ bug.price | currency:'EUR':'symbol':'1.2-2'}}</span>
-            <mat-divider></mat-divider>
-          </p>
+        <mat-card-content class="dashboard-card-content">
+          <div *ngIf="card.id === 'brg'">
+            <p *ngFor="let bug of burgers">
+              <span>{{ bug.title }}</span> :
+              <span>{{ bug.description }}</span>
+              <span class="price">{{ bug.price | currency:'EUR':'symbol':'1.2-2'}}</span>
+              <mat-divider></mat-divider>
+            </p>
+          </div>
         </mat-card-content>
-        <mat-card-content class="dashboard-card-content" *ngIf="card.id === 'pzz'">
-          <p *ngFor="let piz of pizzas">
-            <span>{{ piz.title }}</span> :
-            <span>{{ piz.description }}</span>
-            <span class="price">{{ piz.price | currency:'EUR':'symbol':'1.2-2'}}</span>
-            <mat-divider></mat-divider>
-          </p>
+        <mat-card-content class="dashboard-card-content">
+          <div  *ngIf="card.id === 'pzz'">
+            <p *ngFor="let piz of pizzas">
+              <span>{{ piz.title }}</span> :
+              <span>{{ piz.description }}</span>
+              <span class="price">{{ piz.price | currency:'EUR':'symbol':'1.2-2'}}</span>
+              <mat-divider></mat-divider>
+            </p>
+          </div>
         </mat-card-content>
       </mat-card>
     </mat-grid-tile>
