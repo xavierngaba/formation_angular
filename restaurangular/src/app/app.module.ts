@@ -13,6 +13,7 @@ import { ReserveComponent } from './reserve/reserve.component';
 import { ContactComponent } from './contact/contact.component';
 import { MainDashComponent } from './main-dash/main-dash.component';
 import { DishTableComponent } from './dish-table/dish-table.component';
+import {MatDividerModule} from '@angular/material/divider';
 
 const routes: Routes = [
   { path: '' , component:  HomeComponent}, // http://localhost:4200
@@ -47,7 +48,8 @@ const routes: Routes = [
     MatMenuModule,
     MatTableModule,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,
+    MatDividerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
