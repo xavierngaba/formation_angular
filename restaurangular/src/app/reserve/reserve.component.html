@@ -23,3 +23,11 @@
 </form>
 
 {{ reservationForm.value | json }}
+
+<form #f="ngForm">
+  <mat-form-field>
+    <input matInput type="text" name="firstName" [(ngModel)]="client.firstName" placeholder="prénom">
+  </mat-form-field>
+</form>
+
+{{ f.controls.firstName?.value }}
