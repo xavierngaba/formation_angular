@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder } from '@angular/forms';
+import { FormGroup, FormBuilder, FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'cc-reserve',
@@ -28,6 +28,14 @@ export class ReserveComponent implements OnInit {
       time: "",
       people: 1
     });
+  }
+
+  finalizeReservation(form) {
+    if(form.valid){
+      console.log('valid!');
+      console.log(form.value);
+      console.log(form);
+    } 
   }
 
 }
