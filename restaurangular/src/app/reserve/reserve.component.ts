@@ -14,6 +14,8 @@ export class ReserveComponent implements OnInit {
   timeOptions = ["12:00","12:30","13:00","13:30","19:00","19:30","20:00","20:30"];
   peopleOptions = [1,2,3,4,5,6,7,8];
 
+  isScheduleOk = false;
+
   client = {firstName: '', lastName: '', email: '', phone: ''};
 
   constructor(private fb: FormBuilder) { }
@@ -28,6 +30,13 @@ export class ReserveComponent implements OnInit {
       time: "",
       people: 1
     });
+  }
+
+  saveReservation() {
+    if(this.reservationForm.valid){
+      console.log(this.reservationForm);
+      this.isScheduleOk = true;
+    }
   }
 
   finalizeReservation(form) {
