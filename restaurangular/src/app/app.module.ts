@@ -32,12 +32,14 @@ import { ContactComponent } from './contact/contact.component';
 import { MainDashComponent } from './main-dash/main-dash.component';
 import { DishTableComponent } from './dish-table/dish-table.component';
 import { MatDividerModule } from '@angular/material/divider';
+import { ScheduleComponent } from './schedule/schedule.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent }, // http://localhost:4200
   { path: 'carte', component: CarteComponent }, // http://localhost:4200/carte
   { path: 'reserve', component: ReserveComponent }, // http://localhost:4200/reserve
-  { path: 'contact', component: ContactComponent } // http://localhost:4200/contact
+  { path: 'contact', component: ContactComponent }, // http://localhost:4200/contact
+  { path: 'schedule', component: ScheduleComponent } // http://localhost:4200/schedule
 ];
 
 @NgModule({
@@ -49,7 +51,8 @@ const routes: Routes = [
     ReserveComponent,
     ContactComponent,
     MainDashComponent,
-    DishTableComponent
+    DishTableComponent,
+    ScheduleComponent
   ],
   imports: [
     BrowserModule,
